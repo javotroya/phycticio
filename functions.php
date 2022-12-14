@@ -54,7 +54,7 @@ try {
 |
 */
 
-collect(['setup', 'filters', 'plugins'])
+collect(['setup', 'filters', 'actions', 'plugins', 'controllers'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(

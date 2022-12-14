@@ -13,6 +13,10 @@ add_action( 'tgmpa_register', function(){
             'source' => "{$download_url}advanced-custom-fields-pro.zip",
         ),
         array(
+            'name' => 'Fakerpress',
+            'slug' => 'fakerpress',
+        ),
+        array(
             'name' => 'Post SMTP',
             'slug' => 'post-smtp',
         ),
@@ -27,6 +31,11 @@ add_action( 'tgmpa_register', function(){
         array(
             'name' => 'JWT Authentication',
             'slug' => 'jwt-authentication-for-wp-rest-api',
+        ),
+        array(
+            'name' => 'Bootstrap Nav Walker',
+            'slug' => 'wp-bootstrap-navwalker-master',
+            'source' => 'https://github.com/wp-bootstrap/wp-bootstrap-navwalker/archive/refs/tags/v4.3.0.zip'
         ),
     );
 

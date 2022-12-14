@@ -109,6 +109,15 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    if( function_exists('acf_add_options_page') ) {
+        acf_add_options_sub_page(array(
+            'page_title'  => 'Sage Settings',
+            'menu_title'  => 'Sage Settings',
+            'parent_slug' => 'themes.php',
+            'capability'    => 'manage_options',
+        ));
+    }
 }, 20);
 
 /**
