@@ -14,6 +14,8 @@ use function Roots\bundle;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
+    wp_register_style('material-icons', 'https://fonts.googleapis.com/css2?family=Material+Icons', null, 2);
+    wp_enqueue_style('material-icons');
     bundle('app')->enqueue();
 }, 100);
 
