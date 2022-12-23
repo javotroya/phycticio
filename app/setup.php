@@ -15,7 +15,9 @@ use function Roots\bundle;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_register_style('material-icons', 'https://fonts.googleapis.com/css2?family=Material+Icons', null, 2);
+    wp_register_style('material-symbols', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200', null, 2);
     wp_enqueue_style('material-icons');
+    wp_enqueue_style('material-symbols');
     bundle('app')->enqueue();
 }, 100);
 

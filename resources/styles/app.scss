@@ -1,4 +1,8 @@
 @import "bootstrap";
-@import "settings/colors";
-@import "base/header";
-@import "base/nav";
+
+.row {
+  height: 100vh;
+  .col {
+    height: 100%;
+  }
+}

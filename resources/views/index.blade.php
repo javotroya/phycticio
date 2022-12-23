@@ -1,23 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
-  @if (! have_posts())
-    <div class="alert alert-warning">
-      {!! __('Sorry, no results were found.', 'sage') !!}
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex flex-column align-content-center align-items-center justify-content-center">
+        <h1>404</h1>
+        <p>Page not found</p>
+      </div>
     </div>
-
-    {!! get_search_form(false) !!}
-  @endif
-
-  @while(have_posts()) @php(the_post())
-    @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
-  @endwhile
-
-  {!! get_the_posts_navigation() !!}
-@endsection
-
-@section('sidebar')
-  @include('sections.sidebar')
+  </div>
 @endsection
